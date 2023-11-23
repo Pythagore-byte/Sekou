@@ -15,27 +15,54 @@ int main()
 
     };
     
-    // for (int i = 0; i < 5; i++)
-    // {
-    //     printf("%s %s: %d\t\n",tabPatient[i].prenom,tabPatient[i].nom ,  obesite(tabPatient[i]));
-    // }
-    
-    // FILE *fichier = fopen("test.txt", "r");
-    // if (fichier ==NULL)
-    // {
-    //     exit(1);
-    // }
-    
-    // while (fgetc(fichier)!=EOF)
-    // {
-    //     printf("%c",fgetc(fichier));
+    unRepas listeRepas[4]={
+        {140, 123.4, 22.5},
+        {120, 121.4, 295},
+        {142, 100.4, 229.5},
+        {110, 123.4, 129.5},
+    };
 
+    
+    
+    FILE *fichier = fopen("menus_TP2_python.csv", "r");
+    if (fichier ==NULL)
+    {
+        exit(1);
+    }
+   
+    fscanf(fichier, "%*[^\n]\n");
+  
+    // while (fscanf(fichier, "%99[^,],%99[^,]\n",cat, des));
+    // {
+    //     printf("Categorie : %s\n",des );
     // }
     
+    
+    // fscanf(fichier, "%s,%s,%d", cat,des, &nombre);
+    // printf("%s",cat);
+    // fscanf(fichier, "%s,%s,%d", cat,des, &nombre);
+    // printf("%s",cat);
+    char c1[150];
+    char c2[150];
+    float nombre;
+
+    // fscanf(fichier, "%s, %s,%f\n",c1,c2, &nombre);
+    // printf("%s, %s, %f\n", c1,c2,nombre);
+    // fscanf(fichier, "%s, %s,%f\n",c1,c2, &nombre);
+    // printf("%s, %s, %f\n", c1,c2,nombre);
+    // while (fscanf(fichier, "%[^,],%[^,],%f",c1,c2,&nombre))
+    // {
+    //     /* code */ fscanf(fichier, "%[^,],%[^,],%f",c1,c2,&nombre);
+    // printf("%s, %s, %f\n", c1,c2,nombre);
+    // }
+    
+    // ecrire_dans_fichier(tabPatient[0], listeRepas, 3);
+    recupererInfoFichier(listeRepas[0]);
+    
+    
+    fclose(fichier);
     
    
-    
-    // fclose(fichier);
    
     
     // for (int i = 0; i < 5; i++)

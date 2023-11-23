@@ -33,10 +33,23 @@ typedef enum repas // une enumeration de type repas composee de steak de 200 g ,
 
 }repas;
 
+typedef struct repass
+{
+    float qriz;
+    float  qboeurre;
+    float qsteak;
+    
+}unRepas;
+
+
+
 
 
 int obesite(patient P);
 ratio nombre_gramme_necessaire(patient P);
-int nombre_kcal_abs();
-float energie_depensee(patient P);
-int ecrire_dans_fichier(patient P);
+int nombre_kcal_abs(unRepas R);
+float energie_pompes(patient P, int nombre_pompes);
+float energie_flexions(patient P, int nombre_flexions);
+float energie_depensee(patient P, int nPompes, int nFlexions);
+void ecrire_dans_fichier(patient P, unRepas R[4], int nombreflexion);
+void recupererInfoFichier(unRepas R);
