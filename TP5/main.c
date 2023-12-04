@@ -47,7 +47,7 @@ int main()
     afficherImage(monImage, ligne, colonne);
     liberer_tableau(monImage, ligne);
 
-    
+    // je clone sur mon pc de travail juste pour essayer
     
     
     
